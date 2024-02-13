@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1017740229638",
+    "project_id": "affinity-79d0d",
+    "storage_bucket": "affinity-79d0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017740229638:android:4138a166ae43b13fe95787",
+        "android_client_info": {
+          "package_name": "com.example.affinity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLIYlGeiB9rENhkQCLpYTZnKA6_v5RZxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
