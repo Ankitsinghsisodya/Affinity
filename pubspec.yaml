@@ -43,6 +43,7 @@ dependencies:
   get: ^4.6.6
   sizer2: ^2.0.15
   flutter_sizer: ^1.0.5
+  bordered_text: ^2.0.0
 
 dev_dependencies:
   flutter_test:

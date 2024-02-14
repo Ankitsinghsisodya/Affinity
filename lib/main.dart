@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.red,
         ),
         routes: {
-          '/home': (context) => MyHomePage(
+          '/home': (context) => const MyHomePage(
                   currentScreen: HomeScreen(
                 isLogin: true,
               )),
@@ -121,13 +121,12 @@ class AuthWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final firebaseUser = context.watch<User?>();
     if (firebaseUser != null) {
-      //print(firebaseUser.emailVerified);
-      return MyHomePage(
+      return const MyHomePage(
           currentScreen: HomeScreen(
         isLogin: true,
       ));
     } else {
-      return MyHomePage(
+      return const MyHomePage(
           currentScreen: HomeScreen(
         isLogin: false,
       ));

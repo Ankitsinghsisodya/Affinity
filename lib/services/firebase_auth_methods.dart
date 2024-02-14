@@ -33,6 +33,7 @@ class FireBaseAuthMethods {
     required String password,
     required BuildContext context,
   }) async {
+    showSnackBar(context, "Loading...");
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
       if (!_auth.currentUser!.emailVerified) {

@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:math';
+import 'package:bordered_text/bordered_text.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.isLogin});
@@ -29,11 +30,18 @@ class _HomeScreenState extends State<HomeScreen> {
     final docRef = db.collection("users").doc(email);
     docRef.get().then(
       (DocumentSnapshot doc) {
-        final data = doc.data() as Map<String, dynamic>;
-        setState(() {
-          _isMatched = data["isMatched"];
-          _crushDetail = data["crushName"];
-        });
+        if (doc.exists) {
+          final data = doc.data() as Map<String, dynamic>;
+          setState(() {
+            _isMatched = data["isMatched"];
+            _crushDetail = data["crushName"];
+          });
+        } else {
+          setState(() {
+            _isMatched = false;
+            _crushDetail = "";
+          });
+        }
       },
       onError: (e) => debugPrint("Error getting document: $e"),
     );
@@ -102,7 +110,7 @@ class MatchData extends StatelessWidget {
   final bool isMatched;
   final String crushDetail;
   final message =
-      "The depth of your love isn't measured by their response; it's measured by your courage to express it. \n We are sorry to inform you, that you didn't have a match.";
+      "The depth of your love isn't measured by their response, it's measured by your courage to express it. \n We are sorry to inform you, that you didn't have a match.";
   final Size screenSize;
   final cMessage = "Sometimes the heart sees what is invisible to the eye.";
   @override
@@ -113,12 +121,16 @@ class MatchData extends StatelessWidget {
     } else {
       msg = message;
     }
-    return Text(msg,
-        textAlign: TextAlign.center,
-        style: GoogleFonts.lato(
-            color: Colors.red,
-            fontSize: min(screenSize.width * 0.05, 25),
-            fontWeight: FontWeight.w900));
+    return BorderedText(
+      strokeWidth: 2.0,
+      strokeColor: Colors.red,
+      child: Text(msg,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.lato(
+              color: const Color.fromARGB(255, 255, 255, 255),
+              fontSize: min(screenSize.width * 0.05, 25),
+              fontWeight: FontWeight.w900)),
+    );
   }
 }
 
@@ -141,7 +153,7 @@ class RedButton extends StatelessWidget {
         if (isLogin) {
           Navigator.pushNamed(context, '/crushlist');
         } else {
-          Navigator.pushNamed(context, '/signin');
+          Navigator.pushNamed(context, '/login');
         }
       },
       child: Padding(
