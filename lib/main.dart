@@ -92,21 +92,20 @@ class MyHomePage extends StatelessWidget {
         child: SizedBox(
           height: double.infinity,
           width: double.infinity,
-          child: Center(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Image(
-                    image: const AssetImage("assets/image/logo-bg.png"),
-                    height: min(120, screenSize.height * 0.50),
-                    width: min(180, screenSize.width * 0.60),
-                  ),
-                  SizedBox(
-                    height: min(8, screenSize.height * 0.01),
-                  ),
-                  currentScreen,
-                ],
-              ),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Image(
+                  image: const AssetImage("assets/image/logo-bg.png"),
+                  height: min(100, screenSize.height * 0.50),
+                  width: min(160, screenSize.width * 0.60),
+                ),
+                SizedBox(
+                  height: min(8, screenSize.height * 0.01),
+                ),
+                currentScreen,
+              ],
             ),
           ),
         ),
@@ -122,7 +121,6 @@ class AuthWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final firebaseUser = context.watch<User?>();
     if (firebaseUser != null) {
-      //print(firebaseUser.emailVerified);
       return const MyHomePage(
           currentScreen: HomeScreen(
         isLogin: true,
