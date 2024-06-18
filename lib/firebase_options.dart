@@ -43,39 +43,3 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCEh40oyq-QXUqoTJoyDSdR49Jvg7XE0ZQ',
-    appId: '1:1017740229638:web:1ecc48240574c412e95787',
-    messagingSenderId: '1017740229638',
-    projectId: 'affinity-79d0d',
-    authDomain: 'affinity-79d0d.firebaseapp.com',
-    storageBucket: 'affinity-79d0d.appspot.com',
-    measurementId: 'G-N7DSNZW2SP',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDLIYlGeiB9rENhkQCLpYTZnKA6_v5RZxw',
-    appId: '1:1017740229638:android:4138a166ae43b13fe95787',
-    messagingSenderId: '1017740229638',
-    projectId: 'affinity-79d0d',
-    storageBucket: 'affinity-79d0d.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDQUbJVc-u4BYAzbnE68tDTuo8uUgcFZ3g',
-    appId: '1:1017740229638:ios:4683ad0f84dd217ce95787',
-    messagingSenderId: '1017740229638',
-    projectId: 'affinity-79d0d',
-    storageBucket: 'affinity-79d0d.appspot.com',
-    iosBundleId: 'com.example.affinity',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDQUbJVc-u4BYAzbnE68tDTuo8uUgcFZ3g',
-    appId: '1:1017740229638:ios:9fd1862d025acf7fe95787',
-    messagingSenderId: '1017740229638',
-    projectId: 'affinity-79d0d',
-    storageBucket: 'affinity-79d0d.appspot.com',
-    iosBundleId: 'com.example.affinity.RunnerTests',
-  );
-}
