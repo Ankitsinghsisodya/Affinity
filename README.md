@@ -6,7 +6,7 @@
 
 Affinity is the ultimate matchmaker for BIT Mesra students, created just in time for Valentine's Day. This web application provides a platform for students to express their romantic interests discreetly. By allowing users to list their top five crushes and ranking them by priority, Affinity adds a fun twist to campus romance. When two users have each other on their lists, a match is made, offering a unique opportunity to foster new relationships.
 
-Developed in just two nights, Affinity captures the excitement and spontaneity of love, making it the perfect companion for those looking to celebrate the season of love.
+Developed with hardwork and passion, Affinity captures the excitement and spontaneity of love, making it the perfect companion for those looking to celebrate the season of love.
 
 ## Features
 
